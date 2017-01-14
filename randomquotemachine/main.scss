@@ -1,15 +1,28 @@
-body
+//body
+//{
+//    background-color: #2E1437;
+//    background: -webkit-linear-gradient(#683A5E, #2E1437);
+//    background: -o-linear-gradient(#683A5E, #2E1437);
+//    background: -moz-linear-gradient(#683A5E, #2E1437);
+//    background: linear-gradient(#683A5E, #2E1437);
+//}
+//
+
+#button_gen
 {
-    background-color: #2E1437;
-    background: -webkit-linear-gradient(#683A5E, #2E1437);
-    background: -o-linear-gradient(#683A5E, #2E1437);
-    background: -moz-linear-gradient(#683A5E, #2E1437);
-    background: linear-gradient(#683A5E, #2E1437);
+    //margin-top: 50px;
+    //margin-bottom: 100px;
+    //margin-right: auto;
+    margin: 10px auto;
 }
 
 
-.button_gen
+#quote
 {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    //border: 1px black solid;
+    padding: 30px;
+    //margin: 10px;
+    box-shadow: 0px 1px 20px 0px #777;
+    //last pixel value is spread, one before is blur
+
 }

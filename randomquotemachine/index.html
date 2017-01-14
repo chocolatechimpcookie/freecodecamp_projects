@@ -9,27 +9,40 @@
     </head>
     
     <body>
-        <div id="container_wrapper">
+        <div class="container">
             
-            <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    
+                    <div id="quote">
+                        Sample Text
+                    </div>
                 </div>
                 
             </div>            
             
             <div class="row">
-                <button class="button_gen">Generate Quote!</button>                    
+                <div class="col-xs-12">
+                    <button id="button_gen">Generate Quote!</button>                    
+                    
+                </div>
                 
             </div>
             
-            
-            </div>
-            
-            
+        
         </div>
 
         
-    </body>   
+    </body>
+    
+    
+    <script>
+        $(function()
+        {
+            $("#button_gen").on("click", function()
+            {
+                
+            });
+        });
+        
+    </script>
 </html>
