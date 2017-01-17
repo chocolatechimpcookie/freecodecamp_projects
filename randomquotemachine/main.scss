@@ -8,12 +8,33 @@
 //}
 //
 
+body
+{
+}
+
 #button_gen
 {
-    //margin-top: 50px;
+    margin-top: 20px;
     //margin-bottom: 100px;
-    //margin-right: auto;
-    margin: 10px auto;
+    margin-right: auto;
+    margin-left:auto;
+    //margin: 10px auto;
+    display: block;
+    color: white;
+    background-color: #3AB09E;
+    border: thin;
+    border-radius: 1px;
+    &:hover
+    {
+        color: #3AB09E;
+        background-color: white;
+        font-weight: 800;
+        font-size:15px;
+    }
+    &:active, &:focus
+    {
+        outline: 0;
+    }
 }
 
 
@@ -24,5 +45,14 @@
     //margin: 10px;
     box-shadow: 0px 1px 20px 0px #777;
     //last pixel value is spread, one before is blur
+    background-color: #3AB09E;
+    color: white;
+    border-radius: 1px;
+}
 
+#quote_author
+{
+    margin-bottom:10px;
+    font-family: "Coventry Garden NF", "Nickelodeon NF", "Antique Book Cover", "Ubuntu";
+    font-size: 40px;
 }

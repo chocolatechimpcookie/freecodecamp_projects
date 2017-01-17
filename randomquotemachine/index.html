@@ -13,16 +13,23 @@
             
             <div class="row">
                 <div class="col-xs-12">
+                    <div id="quote_author">Nikola Tesla</div>
+                    
                     <div id="quote">
-                        Sample Text
+                        "<span>
+                        The spread of civilisation may be likened to a fire; first, a feeble spark, next a flickering flame, then a mighty blaze, ever increasing in speed and power.
+
+                        </span>"
                     </div>
+
+                    
                 </div>
                 
             </div>            
             
             <div class="row">
                 <div class="col-xs-12">
-                    <button id="button_gen">Generate Quote!</button>                    
+                    <button class="button" id="button_gen">Generate Quote!</button>                    
                     
                 </div>
                 
@@ -40,9 +47,39 @@
         {
             $("#button_gen").on("click", function()
             {
-                
+                $.ajax(
+                    {
+                        url: 'http://api.forismatic.com/api/1.0/?',
+                        dataType: 'jsonp',
+                        data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+                        success: function (data)
+                        {
+                             console.log(data);
+                            console.log(data);
+                            if (data.quoteAuthor)
+                            {
+                                $("#quote_author").html(data.quoteAuthor);
+                            }
+                            else
+                            {
+                                $("#quote_author").html("Unattributed");
+                            }
+                            $("#quote > span").html(data.quoteText);
+                        },
+                        error: function (xhr, status, error)
+                        {
+                            console.log(status);
+                            console.log(xhr);
+                            console.log(error);
+                        }
+                        
+                    
+                    
+                    });
             });
         });
+        
+    // maybe vanilla alternate below?        
         
     </script>
 </html>
