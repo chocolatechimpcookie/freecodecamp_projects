@@ -1,25 +1,7 @@
-//body
-//{
-//    background-color: #2E1437;
-//    background: -webkit-linear-gradient(#683A5E, #2E1437);
-//    background: -o-linear-gradient(#683A5E, #2E1437);
-//    background: -moz-linear-gradient(#683A5E, #2E1437);
-//    background: linear-gradient(#683A5E, #2E1437);
-//}
-//
-
-body
-{
-}
 
 #button_gen
 {
-    margin-top: 20px;
-    //margin-bottom: 100px;
-    margin-right: auto;
-    margin-left:auto;
-    //margin: 10px auto;
-    display: block;
+
     color: white;
     background-color: #3AB09E;
     border: thin;
@@ -35,6 +17,22 @@ body
     {
         outline: 0;
     }
+}
+
+.buttons_wrapper
+{
+  margin-top: 20px;
+  //margin-bottom: 100px;
+  // margin-right: auto;
+  // margin-left:auto;
+  //margin: 10px auto;
+  display: block;
+}
+
+#button_tweet
+{
+    width:30px;
+    margin-right: 5px;
 }
 
 
