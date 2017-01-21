@@ -16,10 +16,7 @@
                     <div id="quote_author">Nikola Tesla</div>
 
                     <div id="quote">
-                        "<span>
-                        The spread of civilisation may be likened to a fire; first, a feeble spark, next a flickering flame, then a mighty blaze, ever increasing in speed and power.
-
-                        </span>"
+                        "<span>The spread of civilisation may be likened to a fire; first, a feeble spark, next a flickering flame, then a mighty blaze, ever increasing in speed and power</span>"
                     </div>
 
 
@@ -85,7 +82,10 @@
               var quote = $("#quote > span").html();
               console.log(quote);
               console.log(author);
-              open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=');
+              open('https://twitter.com/intent/tweet?hashtags=quotes&related=&text='
+               + encodeURIComponent('"' + quote + '" -' + author ));
+
+
 
             });
 
