@@ -9,8 +9,11 @@
     </head>
 
     <body>
-
-
+        <h1>Weather application</h1>
+        
+        <h5 id="location"></h5>
+        <h6 id="temperature"></h6>
+        <div id="weather"></div>
 
     </body>
 
@@ -18,18 +21,40 @@
     <script>
     // API ID &APPID=061f24cf3cde2f60644a8240302983f2
     // http://api.openweathermap.org/data/2.5/weather?q=
-    $(function(
+            //maybe try putting functions into an object?
+        //Is position in local storage??
+        // if yes
+            //-> call server and get info
+        //else
+            //put position into localstorage
+            //-> call server and get info
+        //geolocation? alternate?
+    $(function()
       {
-        $.ajax(
-          {
-
-          });
 
 
-
-
-
-      }));
+        if (navigator.geolocation)
+        {
+         navigator.geolocation.getCurrentPosition(grabWeather);
+         //callback function
+        }
+        
+        
+        function grabWeather(place)
+        {
+            place = place.coords;
+            console.log(place);
+        }
+        //$.ajax(
+        //  {
+        //
+        //  });
+    
+    
+    
+    
+    
+      });
 
     </script>
 </html>
