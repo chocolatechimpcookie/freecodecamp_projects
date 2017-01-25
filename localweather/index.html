@@ -9,12 +9,13 @@
     </head>
 
     <body>
-        <h1>Weather application</h1>
-        
+      <div class="container">
+        <h1>The Weather</h1>
+        <br>
         <h5 id="location"></h5>
         <h6 id="temperature"></h6>
         <div id="weather"></div>
-
+      </div>
     </body>
 
 
@@ -38,22 +39,38 @@
          navigator.geolocation.getCurrentPosition(grabWeather);
          //callback function
         }
-        
-        
+
+
         function grabWeather(place)
         {
             place = place.coords;
             console.log(place);
+            $.ajax(
+             {
+               url: "http://api.openweathermap.org/data/2.5/weather?lat=" +place.latitude + "&lon=" + place.longitude+"&APPID=061f24cf3cde2f60644a8240302983f2",
+               success: function (data)
+               {
+                 console.log(data);
+                 $("#location").html(data.name);
+                 var temp = ((data.main.temp * 9)/5) - 459.67;
+                 $("#weather").html(data.weather[0].description);
+                 $("#temperature").html(Math.round(temp) + " &#8457");
+               },
+               error: function (xhr, status, error)
+               {
+                 console.log(xhr);
+                 console.log(status);
+                 console.log(error);
+               }
+
+             });
         }
-        //$.ajax(
-        //  {
-        //
-        //  });
-    
-    
-    
-    
-    
+
+
+
+
+
+
       });
 
     </script>
