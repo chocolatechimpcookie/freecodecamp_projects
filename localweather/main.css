@@ -1,2 +1,2 @@
-body{background-color:blue}.container{color:white}
+body{background-color:blue}.container{color:white}#weather_box{border:1px solid white;box-shadow:0 0 1px 2px grey;text-align:center}#temperature_f:hover,#temperature_c:hover{cursor:pointer}
 /*# sourceMappingURL=main.css.map */

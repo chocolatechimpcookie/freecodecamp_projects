@@ -12,9 +12,13 @@
       <div class="container">
         <h1>The Weather</h1>
         <br>
-        <h5 id="location"></h5>
-        <h6 id="temperature"></h6>
-        <div id="weather"></div>
+        <div id="weather_box">
+            <h5 id="location"></h5>
+            <h6 id="temperature_f" ></h6>
+            <h6 id="temperature_c" style="display:none"></h6>
+            <div id="weather"></div>
+            <img id="weather_image"></img>
+        </div>
       </div>
     </body>
 
@@ -52,9 +56,13 @@
                {
                  console.log(data);
                  $("#location").html(data.name);
-                 var temp = ((data.main.temp * 9)/5) - 459.67;
+                 var temp_f = ((data.main.temp * 9)/5) - 459.67;
+                 var temp_c = data.main.temp - 273.15;
                  $("#weather").html(data.weather[0].description);
-                 $("#temperature").html(Math.round(temp) + " &#8457");
+                 $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+                 $("#temperature_f").html(Math.round(temp_f) + " &#8457");
+                 $("#temperature_c").html(Math.round(temp_c) + " &#8451");
+                 
                },
                error: function (xhr, status, error)
                {
@@ -66,7 +74,20 @@
              });
         }
 
-
+        $("#temperature_c").on("click", function()
+        {
+            $(this).hide();
+            $("#temperature_f").show();
+                                
+        });
+        
+        
+        $("#temperature_f").on("click", function()
+        {
+            $(this).hide();
+            $("#temperature_c").show();
+                                
+        });
 
 
 
