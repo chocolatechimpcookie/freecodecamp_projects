@@ -34,65 +34,80 @@
             //put position into localstorage
             //-> call server and get info
         //geolocation? alternate?
-    $(function()
-      {
+        $(function()
+          {
 
 
-        if (navigator.geolocation)
-        {
-         navigator.geolocation.getCurrentPosition(grabWeather);
-         //callback function
-        }
-
-
-        function grabWeather(place)
-        {
-            place = place.coords;
-            console.log(place);
-            $.ajax(
-             {
-               url: "http://api.openweathermap.org/data/2.5/weather?lat=" +place.latitude + "&lon=" + place.longitude+"&APPID=061f24cf3cde2f60644a8240302983f2",
-               success: function (data)
-               {
-                 console.log(data);
-                 $("#location").html(data.name);
-                 var temp_f = ((data.main.temp * 9)/5) - 459.67;
-                 var temp_c = data.main.temp - 273.15;
-                 $("#weather").html(data.weather[0].description);
-                 $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
-                 $("#temperature_f").html(Math.round(temp_f) + " &#8457");
-                 $("#temperature_c").html(Math.round(temp_c) + " &#8451");
-                 
-               },
-               error: function (xhr, status, error)
-               {
-                 console.log(xhr);
-                 console.log(status);
-                 console.log(error);
-               }
-
-             });
-        }
-
-        $("#temperature_c").on("click", function()
-        {
-            $(this).hide();
-            $("#temperature_f").show();
-                                
-        });
-        
-        
-        $("#temperature_f").on("click", function()
-        {
-            $(this).hide();
-            $("#temperature_c").show();
-                                
-        });
+            // if (navigator.geolocation)
+            // {
+            //  navigator.geolocation.getCurrentPosition(grabWeather);
+            //  //callback function
+            // }
 
 
 
 
-      });
+            function grabWeather()
+            {
+              $.get('http://ipinfo.io', function(place)
+                {
+                  console.log(place);
+
+                  place = place.loc.split(",");
+                  var latitude = place[0];
+                  var longitude = place[1];
+                  // console.log(place);
+                  $.ajax(
+                   {
+                     url: "http://api.openweathermap.org/data/2.5/weather?lat=" +latitude + "&lon=" + longitude+"&APPID=061f24cf3cde2f60644a8240302983f2",
+                     success: function (data)
+                     {
+                       console.log(data);
+                       $("#location").html(data.name);
+                       var temp_f = ((data.main.temp * 9)/5) - 459.67;
+                       var temp_c = data.main.temp - 273.15;
+                       $("#weather").html(data.weather[0].description);
+                       $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+                       $("#temperature_f").html(Math.round(temp_f) + " &#8457");
+                       $("#temperature_c").html(Math.round(temp_c) + " &#8451");
+
+                     },
+                     error: function (xhr, status, error)
+                     {
+                       console.log(xhr);
+                       console.log(status);
+                       console.log(error);
+                     }
+
+                   });
+
+                }, "jsonp");
+
+            }
+
+            grabWeather();
+
+            $("#temperature_c").on("click", function()
+            {
+                $(this).hide();
+                $("#temperature_f").show();
+
+            });
+
+
+            $("#temperature_f").on("click", function()
+            {
+                $(this).hide();
+                $("#temperature_c").show();
+
+            });
+
+
+
+
+          });
+
+
 
     </script>
 </html>
