@@ -1,61 +1,55 @@
+
+<!--User Story: I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.-->
+<!---->
+<!--User Story: I can click a button to see a random Wikipedia entry.-->
+
 <!DOCTYPE html>
 <html>
   <head>
     <script src="../libraries/jquery-2.2.3.min.js"></script>
+    <script src="../libraries/angular1_6_1.min.js"></script>
     <script src="../libraries/bootstrap.min.js"></script>
     <link href="../libraries/bootstrap.min.css" rel="stylesheet"/>
     <link href="./main.css" rel="stylesheet">
-
+    <script src="./main.js"></script>    
   </head>
 
-  <body>
-    <div class="container">
+  <body ng-app="wikiviewer" ng-controller="maincontroller as main">
+    <nav class="navbar navbar-default">
+      <span style="font-family: Libertine; font-size: 50px; margin-right: 20px;">Wikipedia Viewer</span>
+      <span >
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button>Random Article</button></a>
+        <input type="text" id="search_me"></input>
+        <span ng-click="main.search()" class="glyphicon glyphicon-search"></span>
+        <button id="clear_me">Clear</button>
+      </span>
+    </nav>
+      
+          <div class="container">
     <div class="row">
 
-
       <div class="col-xs-12">
-        <button id="random_article">Random Article</button>
-      </div>
-
-
-
-
-      <div class="col-xs-12">
-        <div id="search_me"></div>
-      <!-- </div> -->
-
-
-
-
-      <!-- <div class="col-xs-2"> -->
-        <button id="clear_me" style="float:right">Clear</button>
-      </div>
-
-
-
-      <div class="col-xs-12">
+      
+      
         <div id="search_options">
-
-          <div class="search_items">
-            <h1>This is an article title</h1>
-
-            <p>This a description</p>
-          </div>
-
+          <!--<div class="search_items">-->
+          <!--  <h1>This is an article title</h1>-->
+          <!---->
+          <!--  <p>This a description</p>-->
+          <!--</div>-->
         </div>
+        
+        
       </div>
 
 
     </div>
+    <!--row-->
     </div>
+    <!--container-->
 
   </body>
 
-
-  <script>
-
-
-  </script>
 
 
 </html>
