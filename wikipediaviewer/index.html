@@ -17,26 +17,27 @@
   <body ng-app="wikiviewer" ng-controller="maincontroller as main">
     <nav class="navbar navbar-default">
       <span style="font-family: Libertine; font-size: 50px; margin-right: 20px;">Wikipedia Viewer</span>
-      <span >
+      <span>
         <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button>Random Article</button></a>
-        <input type="text" id="search_me"></input>
-        <span ng-click="main.search()" class="glyphicon glyphicon-search"></span>
-        <button id="clear_me">Clear</button>
+        <!--<br class="visible-xs">-->
+        <input type="text" ng-model="main.search_input" ></input>
+        <span style="cursor: pointer;" ng-click="main.search()" class="glyphicon glyphicon-search"></span>
+        <button ng-click="main.clear()">Clear</button>
       </span>
     </nav>
       
-          <div class="container">
+    <div class="container">
     <div class="row">
 
       <div class="col-xs-12">
       
       
         <div id="search_options">
-          <!--<div class="search_items">-->
-          <!--  <h1>This is an article title</h1>-->
-          <!---->
-          <!--  <p>This a description</p>-->
-          <!--</div>-->
+          <div ng-repeat="x in main.search_results">
+             <div style="border: 1px solid black;">
+                <h1>{{x.title}}</h1>
+             </div>
+          </div>
         </div>
         
         
