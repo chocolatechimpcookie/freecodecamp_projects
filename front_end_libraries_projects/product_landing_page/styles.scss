@@ -1,0 +1,91 @@
+/* only smallest to medium */
+@media only screen and (max-width:767px) and (min-width:0px)
+{
+  .carousel-item
+  {
+   height:300px;
+  }
+  #header-img
+  {
+    height:75px;
+  }
+
+
+}
+
+/* medium and up */
+@media only screen and(min-width:768px)
+{
+  .carousel-item
+  {
+   height:300px;
+  }
+  #header-img
+  {
+    height:75px;
+  }
+
+
+}
+
+
+/* large and up */
+@media only screen and (min-width: 992px)
+{
+
+
+}
+
+// stuff
+/* xl and up */
+@media only screen and(min-width:1200px)
+{
+
+}
+
+
+#nav-bar
+{
+  position:fixed;
+  top:0;
+  margin:0;
+  padding:0;
+  width:100%;
+  z-index:10000;
+  // color:rgb(37, 189, 214);
+  //
+  background-color:rgb(22, 28, 96);
+
+  a
+  {
+    color:#25bdd6;
+    
+  }
+}
+
+
+/* general rule */
+.flexbox-container
+{
+ display:flex;
+
+}
+
+
+
+.carousel-control-prev, .carousel-control-next, .carousel-caption
+{
+ background: rgba(0, 0, 0, 0.1);
+
+}
+
+/* .carousel-item img
+{
+ max-width:700px;
+ max-height:300px;
+} */
+
+header
+{
+ display:flex;
+}
