@@ -1,7 +1,8 @@
 Projects on this repo can be found hosted live on my [CodePen site][1], direct project links are below.
 
 # Front End Libraries Projects
-[Tribute Page: Larry Page][2] ---
+[Tribute Page: Larry Page][2]
+
 [Product Landing Page: Guitar][3]
 
 # Other Code Camp Projects
