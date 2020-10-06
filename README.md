@@ -9,6 +9,7 @@ Projects on this repo can be found hosted live on my [CodePen site][1], direct p
 
 # Projects with issues on CodePen
 [Local Weather app][2] is having some kind of library / https related issue and fails to load on codepen.
+
 [Random Quote viewer][5]  The API call is broken.
 
 
