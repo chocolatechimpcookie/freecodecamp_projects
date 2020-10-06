@@ -1,9 +1,8 @@
 # mini_web_projects
-Projects can be found hosted live respective of their titles at:
+Projects on this repo can be found hosted live on my [CodePen site][1].
 
-https://codepen.io/chocolatechimpcookie/
+# Front End Libraries Projects
+[Guitar Landing Page][2].
 
-I am hosting them here and there because I prefer writing my projects
-in my desktop environment as opposed to codepen's environment
-and because freecodecamp requests them to be hosted there
-for evaluation purposes.
+[1]: <https://codepen.io/chocolatechimpcookie/>
+[2]: <https://codepen.io/chocolatechimpcookie/pen/JjKjPZG>
