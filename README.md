@@ -13,6 +13,7 @@ Projects on this repo can be found hosted live on my [CodePen site][1], direct p
 [Random Quote viewer][5]  The API call is broken.
 
 
+
 [1]: <https://codepen.io/chocolatechimpcookie/>
 [2]: <https://codepen.io/chocolatechimpcookie/pen/dNZvNP>
 [3]: <https://codepen.io/chocolatechimpcookie/pen/JjKjPZG>

@@ -1,0 +1,39 @@
+/* only smallest to medium */
+@media only screen and (max-width:767px) and (min-width:0px)
+{
+
+}
+
+/* medium and up */
+@media only screen and(min-width:768px)
+{
+
+}
+
+
+/* large and up */
+@media only screen and (min-width: 992px)
+{
+
+
+}
+
+// stuff
+/* xl and up */
+@media only screen and(min-width:1200px)
+{
+
+}
+
+
+input
+{
+  margin-bottom:10px;
+}
+
+form
+{
+  border:1px solid black;
+  border-radius: 1px 1px 1px 1px;
+  // background-color:grey;
+}

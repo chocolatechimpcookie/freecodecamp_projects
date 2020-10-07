@@ -1,3 +1,12 @@
+/* only smallest to medium */
+/* medium and up */
+/* large and up */
+/* xl and up */
+input {
+  margin-bottom: 10px; }
 
+form {
+  border: 1px solid black;
+  border-radius: 1px 1px 1px 1px; }
 
 /*# sourceMappingURL=styles.css.map */
