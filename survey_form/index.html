@@ -26,12 +26,12 @@
 
         <label for="email" id="email-label">Email</label>
         <br>
-        <input id="email" placeholder="What is your email address?"></input>
+        <input type="email" id="email" placeholder="What is your email address?"></input>
         <br>
 
         <label for="number" id="number-label" >Age</label>
         <br>
-        <input id="number" placeholder="How old are you?"></input>
+        <input id="number" type="number" placeholder="How old are you?"></input>
         <br>
         <label for="dropdown" id="dropdown-label:">How did you hear about us?</label>
         <select id="dropdown" name="dropdown">
@@ -45,9 +45,26 @@
           <option value="linkedin">LinkedIn</option>
         </select>
 
+        <p>Would you use our services again?</p>
+        <label>
+          <input name="return-radio" type="radio" value="yes">Yes</input>
+          <input name="return-radio" type="radio" value="no">No</input>
+          <input name="return-radio" type="radio" value="maybe">Maybe</input>
+        </label>
 
 
+        <p>Which terms would describe our service?</p>
+        <label>
+          <input name="describe-check" type="checkbox" value="speedy">Speedy</input>
+          <input name="describe-check" type="checkbox" value="value">Good value</input>
+          <input name="describe-check" type="checkbox" value="goodjob">Well done job</input>
+          <input name="describe-check" type="checkbox" value="friendly">Friendly customer service</input>
+        </label>
 
+        <p> Any additional comments? </p>
+        <input type="text-area" id="additional-comments"></input>
+
+        <input type="submit" id="submit">Submit</input>
       </form>
     </div>
 
