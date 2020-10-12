@@ -25,6 +25,24 @@
 
 }
 
+body
+{
+
+  background: rgb(2,0,36);
+  background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(21,156,208,0.76234243697479) 70%);
+  background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(21,156,208,0.76234243697479) 70%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(21,156,208,0.76234243697479) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#159cd0",GradientType=1);
+
+
+  // background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+  color:white;
+}
+
+input#number
+{
+  width:200px;
+}
 
 input
 {
@@ -33,7 +51,7 @@ input
 
 form
 {
-  border:1px solid black;
-  border-radius: 1px 1px 1px 1px;
+  // border:1px solid black;
+  // border-radius: 1px 1px 1px 1px;
   // background-color:grey;
 }

@@ -2,11 +2,18 @@
 /* medium and up */
 /* large and up */
 /* xl and up */
+body {
+  background: #020024;
+  background: -moz-linear-gradient(90deg, #020024 0%, rgba(21, 156, 208, 0.762342437) 70%);
+  background: -webkit-linear-gradient(90deg, #020024 0%, rgba(21, 156, 208, 0.762342437) 70%);
+  background: linear-gradient(90deg, #020024 0%, rgba(21, 156, 208, 0.762342437) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#159cd0",GradientType=1);
+  color: white; }
+
+input#number {
+  width: 200px; }
+
 input {
   margin-bottom: 10px; }
-
-form {
-  border: 1px solid black;
-  border-radius: 1px 1px 1px 1px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,34 +16,42 @@
 
     <div class="container">
       <h1 id="title">The Survey</h1>
-      <p id="description">Take a few minutes to finish this survey.</p>
+      <p id="description">Please take a few minutes to finish this survey.</p>
+      <br>
 
       <form id="survey">
         <label for="name" id="name-label">Name</label>
         <br>
         <input id="name" placeholder="What is your name?"></input>
         <br>
+        <br>
 
         <label for="email" id="email-label">Email</label>
         <br>
         <input type="email" id="email" placeholder="What is your email address?"></input>
         <br>
+        <br>
 
         <label for="number" id="number-label" >Age</label>
         <br>
-        <input id="number" type="number" placeholder="How old are you?"></input>
+        <input id="number" min="4" max="150" type="number" placeholder="How old are you?"></input>
         <br>
+        <br>
+
         <label for="dropdown" id="dropdown-label:">How did you hear about us?</label>
+        <br>
         <select id="dropdown" name="dropdown">
-          <option value="wom">Word of mouth</option>
-          <option value="tv">TV Advertisement / Marketing</option>
-          <option value="google">Google ad or search result</option>
-          <option value="email">Email</option>
-          <option value="other">Other</option>
-          <option value="facebook">Facebook</option>
-          <option value="instagram">Instagram</option>
-          <option value="linkedin">LinkedIn</option>
+          <option value="wom"> Word of mouth</option>
+          <option value="tv"> TV Advertisement / Marketing</option>
+          <option value="google"> Google ad or search result</option>
+          <option value="email"> Email</option>
+          <option value="other"> Other</option>
+          <option value="facebook"> Facebook</option>
+          <option value="instagram"> Instagram</option>
+          <option value="linkedin"> LinkedIn</option>
         </select>
+        <br>
+        <br>
 
         <p>Would you use our services again?</p>
         <label>
@@ -51,6 +59,8 @@
           <input name="return-radio" type="radio" value="no">No</input>
           <input name="return-radio" type="radio" value="maybe">Maybe</input>
         </label>
+        <br>
+        <br>
 
 
         <p>Which terms would describe our service?</p>
@@ -60,11 +70,15 @@
           <input name="describe-check" type="checkbox" value="goodjob">Well done job</input>
           <input name="describe-check" type="checkbox" value="friendly">Friendly customer service</input>
         </label>
+        <br>
+        <br>
 
         <p> Any additional comments? </p>
         <input type="text-area" id="additional-comments"></input>
+        <br>
+        <br>
 
-        <input type="submit" id="submit">Submit</input>
+        <input type="submit" id="submit"></input>
       </form>
     </div>
 
