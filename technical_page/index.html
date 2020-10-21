@@ -19,11 +19,11 @@
   <main id="main-doc">
       <section class="main-section">
         <h1>1: Introduction to Sass Syntax</h1>
-        <h3> SCSS</h3>
         <p>The SCSS syntax uses the file extension .scss. With a few small exceptions, it’s a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.</p>
-        <h4>SCSS looks like this:</h4>
+        <h4>SCSS syntax looks like this:</h4>
+
+        <code>
         <pre>
-          <code>
           @mixin button-base() {
           @include typography(button);
           @include ripple-surface;
@@ -41,10 +41,10 @@
             color: $mdc-button-disabled-ink-color;
             cursor: default;
             pointer-events: none;
+            }
           }
-        }
+        </pre>
         </code>
-      </pre>
       </section>
 
       <section class="main-section">
@@ -96,17 +96,72 @@
         <h4>Literals</h4>
         <p>The simplest expressions just represent static values:</p>
         <ul>
+          <li>Numbers, which may or may not have units, like 12 or 100px.</li>
+          <li>Strings, which may or may not have quotes, like "Helvetica Neue" or bold.</li>
+          <li>Colors, which can be referred to by their hex representation or by name, like #c6538c or blue.</li>
+          <li>The boolean literals true or false.</li>
+          <li>The singleton null.</li>
+          <li>Lists of values, which may be separated by spaces or commas and which may be enclosed in square brackets or no brackets at all, like 1.5em 1em 0 2em, Helvetica, Arial, sans-serif, or [col1-start].</li>
+          <li>Maps that associate values with keys, like ("background": red, "foreground": pink).</li>
+        </ul>
 
+        <h4>Operations</h4>
+        <p>Sass defines syntax for a number of operations:</p>
+
+        <ul>
+          <li>== and != are used to check if two values are the same.</li>
+          <li>+, -, *, /, and % have their usual mathematical meaning for numbers, with special behaviors for units that matches the use of units in scientific math.</li>
+          <li><, <=, >, and >= check whether two numbers are greater or less than one another.</li>
+          <li>and, or, and not have the usual boolean behavior. Sass considers every value “true” except for false and null.</li>
+          <li>+, -, and / can be used to concatenate strings.</li>
+          <li>( and ) can be used to explicitly control the precedence order of operations.</li>
+        </ul>
+
+        <h4>Other Expressions</h4>
+        <ul>
+          <li>Variables, like $var.</li>
+          <li>Function calls, like nth($list, 1) or var(--main-bg-color), which may call Sass core library functions or user-defined functions, or which may be compiled directly to CSS.</li>
+          <li>Special functions, like calc(1px + 100%) or url(http://myapp.com/assets/logo.png), that have their own unique parsing rules.</li>
+          <li>The parent selector, &.</li>
+          <li>The value !important, which is parsed as an unquoted string.</li>
         </ul>
       </section>
 
       <section class="main-section">
-        <h1>main section4</h1>
+        <h1>4: Comments</h1>
+
+        <p>The way Sass comments work differs substantially between SCSS and the indented syntax. Both syntaxes support two types of comments: comments defined using /* */ that are (usually) compiled to CSS, and comments defined using // that are not.</p>
+
+        <h4>In SCSS</h4>
+
+        <p>Comments in SCSS work similarly to comments in other languages like JavaScript. Single-line comments start with //, and go until the end of the line. Nothing in a single-line comment is emitted as CSS; as far as Sass is concerned, they may as well not exist. They’re also called silent comments, because they don’t produce any CSS.</p>
+
+        <p>Multi-line comments start with /* and end at the next */. If a multi-line comment is written somewhere that a statement is allowed, it’s compiled to a CSS comment. They’re also called loud comment, by contrast with silent comments. A multi-line comment that’s compiled to CSS may contain interpolation, which will be evaluated before the comment is compiled.</p>
+
+        <p>By default, multi-line comments be stripped from the compiled CSS in compressed mode. If a comment begins with /*!, though, it will always be included in the CSS output.</p>
+
+        <code><pre>
+          // This comment won't be included in the CSS.
+
+          /* But this comment will, except in compressed mode. */
+
+          /* It can also contain interpolation:
+           * 1 + 1 = #{1 + 1} */
+
+          /*! This comment will be included even in compressed mode. */
+
+          p /* Multi-line comments can be written anywhere
+             * whitespace is allowed. */ .sans {
+            font: Helvetica, // So can single-line commments.
+                  sans-serif;
+          }
+        </pre></code>
+
       </section>
 
       <section class="main-section">
         <h1>5: Bibliography</h1>
-        <p>The majority of this page is based on the official Sass documentation.</p>
+        <p>The majority of this page is based on <a href="https://sass-lang.com/documentation">the official Sass documentation.</a></p>
 
       </section>
 
