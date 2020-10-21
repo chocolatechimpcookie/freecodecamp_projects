@@ -1,4 +1,34 @@
+@media only screen and (max-width: 767px) and (mind-width: 0px) {
+  nav#navbar {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+
+  main {
+    position: relative;
+    margin-left: 200px; } }
+@media only screen and (min-width: 768px) {
+  nav#navbar {
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    width: 200px;
+    flex-wrap: wrap;
+    padding-left: 3px;
+    text-align: left;
+    position: fixed;
+    overflow-x: hidden;
+    display: block;
+    border-right: 1px solid rgba(255, 255, 255, 0.25); }
+
+  main {
+    position: relative;
+    margin-left: 200px;
+    padding-left: 10px; } }
 pre {
   color: #e83e8c; }
+
+p, h1, h2, h3, h4, h5, h6, ol, ul, li, body, html {
+  background-color: #343a40;
+  color: white; }
 
 /*# sourceMappingURL=styles.css.map */

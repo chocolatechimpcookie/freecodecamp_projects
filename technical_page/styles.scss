@@ -1,13 +1,63 @@
 // only smallest to medium
 @media only screen and (max-width:767px) and (mind-width:0px)
 {
+  nav#navbar
+  {
+    // position:fixed;
+    // z-index:1000;
+    // width:200px;
+    // height:1000px !important;
+    // flex-wrap:wrap;
+    // padding:3px;
+    margin-bottom:20px;
+    // text-align:left;
+    // position: fixed;
+    // overflow-x: hidden;
+    // display:block;
+    border-bottom: 1px solid rgba(255,255,255,.25);
 
+    a
+    {
+
+    }
+  }
+
+  main
+  {
+    position:relative;
+    margin-left:200px;
+  }
 }
 
 // medium and up
 @media only screen and(min-width:768px)
 {
+  nav#navbar
+  {
+    height:100%;
+    position:fixed;
+    z-index:1000;
+    width:200px;
+    flex-wrap:wrap;
+    padding-left:3px;
+    text-align:left;
+    position: fixed;
+    overflow-x: hidden;
+    display:block;
+    border-right: 1px solid rgba(255,255,255,.25);
 
+    a
+    {
+
+    }
+  }
+
+  main
+  {
+    position:relative;
+    margin-left:200px;
+    padding-left:10px;
+  }
 }
 
 
@@ -41,4 +91,11 @@ pre
   // width:auto;
   // overflow:scroll;
   // padding:11px;
+}
+
+p, h1, h2, h3, h4, h5, h6, ol, ul, li, body, html
+{
+  // background-color:black;
+  background-color: #343a40;
+  color:white;
 }
