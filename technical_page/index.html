@@ -48,11 +48,56 @@
       </section>
 
       <section class="main-section">
-        <h1>2: Structure of a Stylesheet</h1>
+        <h1>2: Sass Statements</h1>
+        <p>Just like CSS, most Sass stylesheets are mainly made up of style rules that contain property declarations. But Sass stylesheets have many more features that can exist alongside these.</p>
+
+        <p>A Sass stylesheet is made up of a series of statements, which are evaluated in order to build the resulting CSS. Some statements may have blocks, defined using { and }, which contain other statements. For example, a style rule is a statement with a block. That block contains other statements, such as property declarations.</p>
+        <p>In SCSS, statements are separated by semicolons (which are optional if the statement uses a block). In the indented syntax, they’re just separated by newlines.</p>
+
+        <h4>Universal Statements</h4>
+        <p>These types of statements can be used anywhere in a Sass stylesheet:</p>
+        <ul>
+          <li>Variable declarations, like <code>$var: value</code> </li>
+          <li>Flow control at-rules, like <code>@if</code> and <code>@each</code>
+          <li>The <code>@error</code>, <code>@warn</code> and <code>@debug</code> rules
+        </ul>
+
+        <h4>CSS Statements</h4>
+        <p>These statements produce CSS. They can be used anywhere except within a <code>@function</code>:</p>
+        <ul>
+          <li>Style rules, like <code>h1 { /* ... */ }</code>.</li>
+          <li>CSS at-rules, like <code>@media</code> and <code>@font-face</code>.</li>
+          <li>Mixin uses using <code>@include</code>.</li>
+          <li>The <code>@at-root</code> rule.</li>
+        </ul>
+
+        <h4>Top-Level Statements</h4>
+        <p>These statements can only be used at the top level of a stylesheet, or nested within a CSS statement at the top level:</p>
+        <ul>
+          <li>Module loads, using <code>@use</code>.</li>
+          <li>Imports, using <code>@import</code>.</li>
+          <li>Mixin definitions using <code>@mixin</code>.</li>
+          <li>Function definitions using <code>@function</code>.</li>
+        </ul>
+
+
+        <h4>Other Statements</h4>
+        <ul>
+          <li>Property declarations like <code>width: 100px</code> may only be used within style rules and some CSS at-rules.</li>
+          <li>The <code>@extend</code> rule may only be used within style rules.</li>
+        </ul>
       </section>
 
       <section class="main-section">
-        <h1>main section3</h1>
+        <h1>3: Sass Expressions</h1>
+
+        <p>An expression is anything that goes on the right-hand side of a property or variable declaration. Each expression produces a value. Any valid CSS property value is also a Sass expression, but Sass expressions are much more powerful than plain CSS values. They’re passed as arguments to mixins and functions, used for control flow with the <code>@if</code> rule, and manipulated using arithmetic. We call Sass’s expression syntax SassScript.</p>
+
+        <h4>Literals</h4>
+        <p>The simplest expressions just represent static values:</p>
+        <ul>
+
+        </ul>
       </section>
 
       <section class="main-section">
@@ -63,7 +108,6 @@
         <h1>5: Bibliography</h1>
         <p>The majority of this page is based on the official Sass documentation.</p>
 
-        <
       </section>
 
 
