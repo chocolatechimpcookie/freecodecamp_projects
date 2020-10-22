@@ -3,6 +3,8 @@ Projects on this repo can be found hosted live on my [CodePen site][1], direct p
 # Responsive Web Design Projects
 [Product Landing Page: Guitar][3]
 
+[Technical Page][6]
+
 # Other Code Camp Projects
 [Wikipedia Viewer][4]
 
@@ -19,3 +21,4 @@ Projects on this repo can be found hosted live on my [CodePen site][1], direct p
 [3]: <https://codepen.io/chocolatechimpcookie/pen/JjKjPZG>
 [4]: <https://codepen.io/chocolatechimpcookie/details/dWWZwy>
 [5]: <https://codepen.io/chocolatechimpcookie/pen/wgoBLe>
+[6]: <https://codepen.io/chocolatechimpcookie/pen/YzWpjye>
